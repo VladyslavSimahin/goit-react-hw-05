@@ -1,0 +1,9 @@
+.div {
+  border: 2px solid black;
+}
+.isTrue {
+  color: green;
+}
+.isFalse {
+  color: red;
+}
