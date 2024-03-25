@@ -1,0 +1,75 @@
+.movieDetailsContainer {
+  padding: 20px;
+}
+
+.goBackLink {
+  display: block;
+  margin-bottom: 20px;
+  color: blue;
+  text-decoration: underline;
+}
+
+.movieDetails {
+  margin-bottom: 20px;
+}
+
+.poster {
+  width: 350px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.userScore {
+  margin-top: 0;
+}
+
+.overviewTitle {
+  font-size: 20px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.overview {
+  margin-top: 0;
+}
+
+.genresTitle {
+  font-size: 20px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.genres {
+  margin-top: 0;
+}
+
+.additionalInfo {
+  margin-bottom: 20px;
+}
+
+.infoTitle {
+  font-size: 20px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.infoList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.infoLink {
+  color: blue;
+  text-decoration: none;
+}
+
+.loading {
+  font-size: 18px;
+  color: #666;
+}
