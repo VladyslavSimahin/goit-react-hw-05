@@ -5,7 +5,7 @@ const MovieDetailsPage = lazy(() =>
   import("../../pages/MovieDetailPage/MovieDetailsPage")
 );
 const Home = lazy(() => import("../../pages/HomePage/HomePage"));
-const MoviePage = lazy(() => import("../../pages/MoviesPage"));
+const MoviesPage = lazy(() => import("../../pages/MoviesPage"));
 const NotFoundPage = lazy(() => import("../../pages/NotFoundPage"));
 const MovieCast = lazy(() => import("../MovieCast/MovieCast"));
 const MovieReviews = lazy(() => import("../MovieReviews/MovieReviews"));
@@ -19,7 +19,7 @@ export default function App() {
         <Suspense fallback={<div>LOADING PAGE...</div>}>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/movies" element={<MoviePage />} />
+            <Route path="/movies" element={<MoviesPage />} />
             <Route path="/movies/:moviesId/*" element={<MovieDetailsPage />}>
               <Route path="cast" element={<MovieCast />} />
               <Route path="reviews" element={<MovieReviews />} />

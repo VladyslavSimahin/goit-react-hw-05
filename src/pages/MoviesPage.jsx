@@ -1,16 +1,20 @@
-import { useEffect, useState } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useEffect, useState, useRef } from "react";
+import { useSearchParams, useLocation, Link } from "react-router-dom";
 import MovieList from "../components/MovieList";
 import MoviesFilter from "../components/MoviesFilter";
 import { getMoviesTitleSearch } from "../moviesApi";
 import Loader from "../components/Loader";
 
-export default function MoviePage() {
+export default function MoviesPage() {
   const [movies, setMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
   const [params] = useSearchParams();
   const moviesTitle = params.get("query") ?? "";
+
+  const location = useLocation();
+
+  const back = useRef(location.state ?? "/movies?query=${moviesTitle}");
 
   useEffect(() => {
     async function fetchDataMovie() {
@@ -34,6 +38,7 @@ export default function MoviePage() {
   };
   return (
     <div>
+      <Link to={back.current}>Go back</Link>
       <MoviesFilter onSubmit={handleSubmit} />
       <div>
         {isLoading && <Loader />}
